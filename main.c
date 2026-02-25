@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int conversie_int(char* s) {
+int conversie_int(const char* s) {
     int rez = 0;
     int i = 0;
     int semn = 1;
@@ -19,10 +19,9 @@ int conversie_int(char* s) {
 
     return semn * rez;
 }
-
+char buffer[128];
 int main() {
 
-    //ex1:
 
     FILE* f = fopen("in.txt", "r");
 
@@ -31,7 +30,7 @@ int main() {
         return 1;
     }
 
-    char buffer[100];
+    
     int sum = 0;
 
     while (fgets(buffer, sizeof(buffer), f)) {

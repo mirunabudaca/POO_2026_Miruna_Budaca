@@ -25,12 +25,12 @@ int main(void) {
         return 0;
     }
 
-    prop[strcspn(prop, "\r\n")] = '\0';
+    prop[strcspn(prop, "\n")] = '\0';
 
     char* cuv[MAX_WORDS];
     int nr = 0;
 
-    const char* delim = " \t";
+    const char* delim = " ";
 
     char* token = strtok(prop, delim);
     while (token != NULL) {
@@ -39,8 +39,6 @@ int main(void) {
         }
         token = strtok(NULL, delim);
     }
-
-    if (nr == 0) return 0;
 
     qsort(cuv, nr, sizeof(cuv[0]), compare);
 

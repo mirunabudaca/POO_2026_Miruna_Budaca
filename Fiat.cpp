@@ -7,12 +7,12 @@ const char* Fiat::GetNume()
 
 double Fiat::GetCapacitateRezervor()
 {
-    return 45;
+    return 15;
 }
 
 double Fiat::GetConsum()
 {
-    return 5.5;
+    return 20;
 }
 
 double Fiat::GetViteza(Weather vreme)

@@ -13,8 +13,9 @@ struct Cuvant
     int aparitii;
 };
 
-struct Comparare
+class Comparare
 {
+public:
     bool operator()(const Cuvant& a, const Cuvant& b)
     {
         if (a.aparitii != b.aparitii)
